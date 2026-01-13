@@ -1,0 +1,115 @@
+:root {
+    --first-color: #081b29;
+    --second-color: #112e42;
+    --main-color: #00abf0;
+    --text-color: #ededed;
+    --placeholder-color: #006c98;
+}
+
+.btn-box {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 34.5rem;
+    height: 5rem;
+}
+
+.btn-box .button {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 15rem;
+    height: 100%;
+    background-color: var(--main-color);
+    border: .2rem solid var(--main-color);
+    border-radius: .8rem;
+    font-size: 2rem;
+    font-weight: 600;
+    letter-spacing: .1rem;
+    color: var(--first-color);
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.btn-box .button:hover {
+    color: var(--main-color);
+}
+
+.btn-box .button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: var(--first-color);
+    z-index: -1;
+    transition: .5s;
+}
+
+.btn-box .button:hover::before {
+    width: 100%;
+}
+
+/* Contact section */
+
+.contact {
+    min-height: auto;
+    padding-bottom: 7rem;
+}
+
+.contact form {
+    max-width: 70rem;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.input-box {
+    /* position: relative; */
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.input-box .input-field {
+    margin: 1rem 0;
+    width: 48%;
+}
+
+.input-box .input-field input,
+.textarea-text textarea {
+    width: 100%;
+    height: 100%;
+    padding: 1.5rem;
+    font-size: 1.5rem;
+    color: var(--text-color);
+    background: transparent;
+    border-radius: .5rem;
+    border: .2rem solid var(--main-color);
+}
+
+::placeholder {
+    color: var(--text-color);
+    opacity: 1; /* Firefox */
+}
+
+.textarea-text {
+    display: flex;
+    margin: 1rem 0 3rem;
+}
+
+.textarea-text textarea {
+    resize: none;
+}
+
+.btn-box button {
+    cursor: pointer;
+}
+
+input[type=text]:focus, input[type=email]:focus, input[type=tel]:focus,
+textarea:focus {
+    background-color: var(--placeholder-color);
+    transition: .7s;
+}

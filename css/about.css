@@ -1,0 +1,108 @@
+:root {
+    --second-color: #112e42;
+    --main-color: #00abf0;
+}
+
+.about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10rem;
+    background: var(--second-color);
+}
+
+/* .about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+    background: var(--second-color);
+    padding-bottom: 6rem;
+} */
+
+.about-Img {
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    border: 20px solid var(--main-color);
+}
+
+.about-Img img {
+    position: relative;
+    width: 30vw;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.about-contentBis {
+    text-align: center;
+}
+
+.about-contentBis h2 {
+    text-align: center;
+    line-height: 1.5;
+}
+
+.about-contentBis h3 {
+    font-size: 2.6rem;
+}
+
+.about-contentBis p {
+    font-size: 1.6rem;
+    margin: 2rem 0 3rem;
+}
+
+/*------------------*/
+
+.aboutImg {
+    position: relative;
+    width: 25rem;
+    height: 25rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.aboutImg img {
+    width: 90%;
+    border-radius: 50%;
+    border: .2rem solid var(--main-color);
+}
+
+.aboutImg .circle-spin {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(0);
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border-top: .2rem solid var(--second-color);
+    border-bottom: .2rem solid var(--second-color);
+    border-left: .2rem solid var(--main-color);
+    border-right: .2rem solid var(--main-color);
+}
+
+.about-content {
+    text-align: center;
+}
+
+.about-content h3 {
+    font-size: 2.5rem;
+}
+
+.about-content p {
+    font-size: 1.6rem;
+    margin: 2rem 0 3rem;
+}
+
+.btn-box.buttons {
+    display: inline-block;
+    width: 15rem;
+}
+
+.btn-box.buttons a::before {
+    background: var(--second-color);
+}

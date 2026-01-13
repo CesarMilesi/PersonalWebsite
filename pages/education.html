@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Education and skills</title>
+
+    <!--Styles-->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/themeSwitcher.css">
+    <link rel="stylesheet" href="../css/languageSwitcher.css">
+    <link rel="stylesheet" href="../css/hamburgerMenu.css">
+    <link rel="stylesheet" href="../css/education.css">
+    <link rel="stylesheet" href="../css/skills.css">
+    <link rel="stylesheet" href="../css/mediaQueries.css">
+
+    <!--Additional classes for some icons effects-->
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+
+    <!--Favicon-->
+    <link rel="icon" type="image/x-icon" href="../images/icons/favicon.ico">
+</head>
+<body>
+    <!-- Header section -->
+    <header class="header">
+        <a href="../index.html" class="logo">César</a>
+        <nav class="navbar">
+            <a href="../index.html" class="active">Home</a>
+            <a href="../pages/about.html">About</a>
+            <a href="../pages/education.html">Education</a>
+            <a data-i18n="projet" href="../pages/projects.html">Projects</a>
+            <a href="../pages/contact.html">Contact</a>
+        </nav>
+        <div class="right-icons">
+            <button type="button" id="darkModeToggle" class="darkModeToggle">
+                <img id="iconTheme" width="35" height="35" src="../images/icons/sun.svg" alt="Sun">
+            </button>
+            <div class="drop-down">
+                <div class="wrapper">
+                    <img src="../images/icons/flags/EN.svg" alt="English flag" class="selectedFlag">
+                    <div id="selectedLanguage" class="selectedLanguage" onchange="fetchJsonContent('education')">English</div>
+                </div>
+                <div class="list">
+                    <div class="language">
+                        <img src="../images/icons/flags/EN.svg" alt="English flag">
+                        <div class="text">English</div>
+                    </div>
+                    <div class="language">
+                        <img src="../images/icons/flags/FR.svg" alt="French flag">
+                        <div class="text">Français</div>
+                    </div>
+                    <div class="language">
+                        <img src="../images/icons/flags/JP.svg" alt="Japanese flag">
+                        <div class="text jp">日本語</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bx bx-menu" id="menu-icon"></div>
+    </header>
+
+    <!-- Education section -->
+    <section class="education" id="education">
+        <h2 class="heading">My <span>Journey</span></h2>
+
+        <div class="education-row">
+            <div class="education-column">
+                <h3 class="title">Education</h3>
+                <div class="education-box">
+                    <div class="education-content">
+                        <div class="content">
+                            <div class="year"><i class="bx bxs-calendar"></i>2017-2018</div>
+                            <h3>Master Degree - University</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id laudantium accusantium, distinctio totam reiciendis beatae? Consequatur beatae doloremque perferendis quibusdam!</p>
+                        </div>
+                    </div>
+                    <div class="education-content">
+                        <div class="content">
+                            <div class="year"><i class="bx bxs-calendar"></i>2017-2018</div>
+                            <h3>Master Degree - University</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id laudantium accusantium, distinctio totam reiciendis beatae? Consequatur beatae doloremque perferendis quibusdam!</p>
+                        </div>
+                    </div>
+                    <div class="education-content">
+                        <div class="content">
+                            <div class="year"><i class="bx bxs-calendar"></i>2017-2018</div>
+                            <h3>Master Degree - University</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id laudantium accusantium, distinctio totam reiciendis beatae? Consequatur beatae doloremque perferendis quibusdam!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="education-column">
+                <h3 class="title">Experience</h3>
+                <div class="education-box">
+                    <div class="education-content">
+                        <div class="content">
+                            <div class="year"><i class="bx bxs-calendar"></i>2017-2018</div>
+                            <h3>Web Developer - Company</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id laudantium accusantium, distinctio totam reiciendis beatae? Consequatur beatae doloremque perferendis quibusdam!</p>
+                        </div>
+                    </div>
+                    <div class="education-content">
+                        <div class="content">
+                            <div class="year"><i class="bx bxs-calendar"></i>2017-2018</div>
+                            <h3>Web Developer - Company</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id laudantium accusantium, distinctio totam reiciendis beatae? Consequatur beatae doloremque perferendis quibusdam!</p>
+                        </div>
+                    </div>
+                    <div class="education-content">
+                        <div class="content">
+                            <div class="year"><i class="bx bxs-calendar"></i>2017-2018</div>
+                            <h3>Web Developer - Company</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id laudantium accusantium, distinctio totam reiciendis beatae? Consequatur beatae doloremque perferendis quibusdam!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="skills">
+        <div class="main-text">
+            <span>Technical & Professional</span>
+            <h2>My Skills</h2>
+        </div>
+        <div class="skill-main">
+            <div class="skill-left">
+                <h3>Programming Skills</h3>
+                <div class="skill-bar">
+                    <div class="info">
+                            <p>C#</p>
+                            <p>55%</p> <!--Faire corresponde au % dans le CSS-->
+                    </div>
+                    <div class="bar">
+                        <span class="csharp"></span>
+                    </div>
+                </div>
+                <div class="skill-bar">
+                   <div class="info">
+                        <p>HTML</p>
+                        <p>72%</p>
+                   </div>
+                   <div class="bar">
+                        <span class="html"></span>
+                    </div>
+                </div>
+                <div class="skill-bar">
+                    <div class="info">
+                         <p>CSS</p>
+                         <p>90%</p>
+                    </div>
+                    <div class="bar">
+                        <span class="css"></span>
+                    </div>
+                </div>
+                <div class="skill-bar">
+                    <div class="info">
+                         <p>JavaScript</p>
+                         <p>36%</p>
+                    </div>
+                    <div class="bar">
+                        <span class="js"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="skill-right">
+                <h3>Web skills</h3>
+                <div class="professional">
+                    <div class="box">
+                        <div class="circle" data-dots="80" data-percent="90"></div>
+                        <div class="text">
+                            <span>90%</span>
+                            <small>CMS</small>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="circle" data-dots="80" data-percent="65"></div>
+                        <div class="text">
+                            <span>65%</span>
+                            <small>UX/UI</small>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="circle" data-dots="80" data-percent="30"></div>
+                        <div class="text">
+                            <span>30%</span>
+                            <small>DTP : Photoshop, Illustrator, Indesign</small>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="circle" data-dots="80" data-percent="40"></div>
+                        <div class="text">
+                            <span>40%</span>
+                            <small>Localization (FR/EN/JP)</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="languages" id="languages">
+        <div class="main-text">
+            <h2>My Languages</h2>
+        </div>
+        <div class="timeline">
+            <div class="container left-container">
+                <img src="../images/icons/timeline/FR_flag.png" alt="French flag">
+                <div class="text-box">
+                    <h2>French</h2>
+                    <small>Test</small>
+                    <p>Native language</p>
+                    <span class="left-container-arrow"></span>
+                </div>
+            </div>
+            <div class="container right-container">
+                <img src="../images/icons/timeline/EN_flag.png" alt="English flag">
+                <div class="text-box">
+                    <h2>English</h2>
+                    <small>Test</small>
+                    <p>Native language</p>
+                    <span class="right-container-arrow"></span>
+                </div>
+            </div>
+            <div class="container left-container">
+                <img src="../images/icons/timeline/JP_flag.png" alt="Japanese flag">
+                <div class="text-box">
+                    <h2>Japanese</h2>
+                    <small>Test</small>
+                    <p>Native language</p>
+                    <span class="left-container-arrow"></span>
+                </div>
+            </div>
+            <div class="container right-container">
+                <img src="../images/icons/timeline/SP_flag.png" alt="Spanish flag">
+                <div class="text-box">
+                    <h2>Spanish</h2>
+                    <small>Test</small>
+                    <p>Native language</p>
+                    <span class="right-container-arrow"></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer section -->
+    <footer class="footer" id="footer">
+        <div class="footerText">
+            <p data-i18n="copyright">Copyright &copy; Portfolio website made by Cesar MILESI - 2024 | All Rights Reserved</p>
+        </div>
+    </footer>
+
+    <script src="../js/header.js"></script>
+    <script src="../js/darkMode.js"></script>
+    <script src="../js/languageSelector.js"></script>
+    <script src="../js/languageSwitcher.js"></script>
+    <script src="../js/hamburgerMenu.js"></script>
+    <script src="../js/skills.js"></script>
+</body>
+</html>

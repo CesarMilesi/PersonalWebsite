@@ -1,0 +1,209 @@
+/*Dark theme colors*/
+:root.darkTheme {
+	--first-color: #081b29;
+    --second-color: #112e42;
+    --text-color: #333;
+    --main-color: #00abf0;
+    --box-shadow: #07263b;
+    --link-icon: #333333;
+}
+
+/*Light theme colors*/
+:root {
+    --first-color: #081b29;
+    --second-color: #112e42;
+    --text-color: #ededed;
+    --main-color: #00abf0;
+    --box-shadow: #07263b;
+    --link-icon: #333333;
+    --languageList-background: #ffffff;
+    --languageList-border: #f8f8f8;
+    --countries-color: #000;
+}
+
+.home {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    min-height: 100vh;
+    align-items: center;
+}
+
+.home-content {
+    flex: 1 1 40rem;
+    padding-top: 1rem;
+    z-index: 1;
+}
+
+.home .image {
+    flex: 1 1 40rem;
+    z-index: 1;
+}
+
+.home .image img {
+    width: 80%;
+    margin-left: 6rem;
+    border-radius: 50%;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+
+.home .image img:hover {
+    box-shadow: 0 5px 15px var(--main-color);
+}
+
+.social-mediaBis a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 4rem;
+    height: 4rem;
+    background: transparent;
+    font-size: 2.5rem;
+    border: 0.2rem solid transparent;
+    margin: 3rem 1.5rem 3rem 0;
+    transition: 0.3s ease;
+    color: var(--link-icon);
+    border-radius: 50%;
+}
+
+.social-mediaBis a:hover {
+    color: var(--text-color);
+    transform: scale(1.5) translateY(-5px);
+}
+
+.home-content h1 {
+    font-size: 5.5rem;
+    font-weight: 700;
+    line-height: 2;
+}
+
+.home-content h1 span {
+    color: var(--text-color);
+}
+
+.home-content h3 {
+    font-size: 3.2rem;
+    font-weight: 700;
+    color: transparent;
+    /* width: max-content; */
+    -webkit-text-stroke: .7px var(--main-color); /*Width & Color of text*/
+}
+
+.home-content p {
+    font-size: 1.5rem;
+    margin: 3rem 0 4rem;
+}   
+
+.text-animation {
+    position: relative;
+    /* width: 36rem; */
+}
+
+.btn-box {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 34.5rem;
+    height: 5rem;
+}
+
+.btn-box .button {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 16rem;
+    height: 100%;
+    background-color: var(--main-color);
+    border: .2rem solid var(--main-color);
+    border-radius: .8rem;
+    font-size: 2rem;
+    font-weight: 600;
+    letter-spacing: .1rem;
+    color: var(--first-color);
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
+}
+
+/* Effect for second button */
+.btn-box .button:nth-child(2) {
+    background: transparent;
+    color: var(--main-color);
+}
+
+.btn-box .button:nth-child(2)::before {
+    background-color: var(--main-color);
+}
+
+.btn-box .button:nth-child(2):hover {
+    color: var(--first-color);
+}
+
+.btn-box .button:hover {
+    color: var(--main-color);
+}
+
+.btn-box .button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: var(--first-color);
+    z-index: -1;
+    transition: .5s;
+}
+
+.btn-box .button:hover::before {
+    width: 100%;
+}
+
+.social-media {
+    /* position: absolute;
+    bottom: 4rem; */
+    width: 120px;
+    margin: 5rem 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.social-media a {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: .2rem solid var(--main-color);
+    border-radius: 50%;
+    font-size: 20px;
+    color: var(--main-color);
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.social-media a:hover {
+    color: var(--first-color);
+}
+
+.social-media a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: var(--main-color);
+    z-index: -1; /*With overflow hidden, put red square behind the circle*/
+    transition: .5s;
+}
+
+.social-media a:hover::before {
+    width: 100%;
+}
