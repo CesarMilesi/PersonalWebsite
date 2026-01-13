@@ -6,11 +6,12 @@
     <title>Contact</title>
 
     <!--Styles-->
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/cookies.css">
     <link rel="stylesheet" href="../css/contact.css">
     <link rel="stylesheet" href="../css/themeSwitcher.css">
     <link rel="stylesheet" href="../css/languageSwitcher.css">
     <link rel="stylesheet" href="../css/hamburgerMenu.css">
+    <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/mediaQueries.css">
 
     <!--Additional classes for some icons effects-->
@@ -20,85 +21,131 @@
     <link rel="icon" type="image/x-icon" href="../images/icons/favicon.ico">
 </head>
 <body>
+    <div class="cookiesWrapper">
+        <div class="cookiesHeader">
+            <i class="bx bx-cookie"></i>
+            <h2 data-i18n="cookiesTitle">Cookies</h2>
+        </div>
+
+        <div class="cookiesData">
+            <p data-i18n="cookieText">We use cookies on this website in order to provide optimal services to each visitors. If you agree with the use of cookies, please select 'Accept'. You can check our <a href="#">privacy policy</a> for more details.</p>
+        </div>
+
+        <div class="cookiesButtons">
+            <button data-i18n="cookieAccept" class="acceptButton" type="button">Accept</button>
+            <button data-i18n="cookieDecline" class="declineButton" type="button">Decline</button>
+        </div>
+    </div>
+
     <!-- Header section -->
     <header class="header">
-        <a href="../index.html" class="logo">César</a>
-        <nav class="navbar">
-            <a href="../index.html" class="active">Home</a>
-            <a href="../pages/about.html">About</a>
-            <a href="../pages/education.html">Education</a>
-            <a data-i18n="projet" href="../pages/projects.html">Projects</a>
-            <a href="../pages/contact.html">Contact</a>
-        </nav>
-        <div class="right-icons">
-            <button type="button" id="darkModeToggle" class="darkModeToggle">
-                <img id="iconTheme" width="35" height="35" src="../images/icons/sun.svg" alt="Sun">
-            </button>
-            <div class="drop-down">
-                <div class="wrapper">
-                    <img src="../images/icons/flags/EN.svg" alt="English flag" class="selectedFlag">
-                    <div id="selectedLanguage" class="selectedLanguage" onchange="fetchJsonContent('contact')">English</div>
+        <nav>
+            <div class="navBar">
+                <div class="logoHamburger">
+                    <div class="bx bx-menu" id="menu-icon"></div>
+                    <span class="logo"><a data-i18n="logo" href="../index.html">César</a></span>
                 </div>
-                <div class="list">
-                    <div class="language">
-                        <img src="../images/icons/flags/EN.svg" alt="English flag">
-                        <div class="text">English</div>
-                    </div>
-                    <div class="language">
-                        <img src="../images/icons/flags/FR.svg" alt="French flag">
-                        <div class="text">Français</div>
-                    </div>
-                    <div class="language">
-                        <img src="../images/icons/flags/JP.svg" alt="Japanese flag">
-                        <div class="text jp">日本語</div>
+                <div class="menu">
+                    <ul class="nav-links">
+                        <li><a data-i18n="home" href="../index.html">Home</a></li>
+                        <li><a data-i18n="about" href="../pages/aboutMe.html">About</a></li>
+                        <li><a data-i18n="education" href="../pages/education.html">Education</a></li>
+                        <li><a data-i18n="projet" href="../pages/projects.html">Projects</a></li>
+                        <li><a data-i18n="contact" href="../pages/contact.html" class="active">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="darkLight-languageBox">
+                    <button type="button" id="darkModeToggle" class="darkModeToggle">
+                        <img id="iconTheme" width="35" height="35" src="../images/icons/sun.svg" alt="Sun">
+                    </button>
+                    <div class="drop-down">
+                        <div class="wrapper">
+                            <img src="../images/icons/flags/EN.svg" alt="English flag" class="selectedFlag">
+                            <div id="selectedLanguage" class="selectedLanguage" onchange="fetchJsonContent('aboutMe')">English</div>
+                        </div>
+                        <div class="list">
+                            <div class="language">
+                                <img src="../images/icons/flags/EN.svg" alt="English flag">
+                                <div class="text">English</div>
+                            </div>
+                            <div class="language">
+                                <img src="../images/icons/flags/FR.svg" alt="French flag">
+                                <div class="text">Français</div>
+                            </div>
+                            <div class="language">
+                                <img src="../images/icons/flags/JP.svg" alt="Japanese flag">
+                                <div class="text jp">日本語</div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="bx bx-menu" id="menu-icon"></div>
+        </nav>
     </header>
 
     <!-- Education section -->
     <section class="contact" id="contact">
-        <h2 class="heading">Contact <span>Me !</span></h2>
-
-        <form action="#">
-            <div class="input-box">
-                <div class="input-field">
-                    <input type="text" placeholder="Full name" required>
+        <div class="container">
+            <div class="leftSide">
+                <h2 data-i18n="contact_Title">Contact <span>Me !</span></h2>
+                <h3 data-i18n="contact_Text">If you have any inquiries or question, feel free to reach out to me by clicking on the mail or by filling the contact form.</h3>
+                <div class="mailMe">
+                    <div class="envelopeContainer">
+                        <i class="bx bx-envelope"></i>
+                    </div>
+                    <div data-i18n="mailMe" class="mailContactContainer">
+                        <p data-i18n="mailMe">Mail me at</p>
+                        <a href="mailto:cesarmb@sfr.fr">cesarmb@sfr.fr</a>
+                    </div>
                 </div>
-                <div class="input-field">
-                    <input type="email" placeholder="Email Address" required>
+                <div class="social-mediaBis">
+                    <a href="https://www.linkedin.com/in/cesar-milesi/" target="_blank" aria-label="linkedin"><i class="bx bxl-linkedin"></i></a>
+                    <a href="https://github.com/CesarMilesi" target="_blank" aria-label="github"><i class="bx bxl-github"></i></a>
                 </div>
             </div>
-            <div class="input-box">
-                <div class="input-field">
-                    <input type="tel" placeholder="Mobile Number" required>
-                </div>
-                <div class="input-field">
-                    <input type="text" placeholder="Email Subject" required>
-                </div>
+            <div class="rightSide">
+                <h3 data-i18n="sendMessage_Title">Send <span>me</span> a message <span><i class="bx bx-rocket"></i></span></h3>
+                <form action="https://api.web3forms.com/submit" method="POST">
+                    <input type="hidden" name="access_key" value="bfe08f6c-7a4a-4279-820e-6a5eba0cfc3f">
+                    <div class="input-box">
+                        <div class="input-field">
+                            <input class="fullName" type="text" placeholder="Full Name" required>
+                        </div>
+                        <div class="input-field">
+                            <input type="email" class="mailAddress" placeholder="Email Address" required>
+                        </div>
+                    </div>
+                    <div class="input-box">
+                        <div class="input-field">
+                            <input type="tel" class="mobileNumber" placeholder="Mobile Number">
+                        </div>
+                        <div class="input-field">
+                            <input type="text" class="mailSubject" placeholder="Email Subject" required>
+                        </div>
+                    </div>
+                    <div class="textarea-text">
+                        <textarea id="yourMessage" class="message" name="Your message" placeholder="Your message" rows="4" cols="30" required></textarea>
+                    </div>
+                    <div class="btn-box button">
+                        <button data-i18n="submitButton" type="submit" class="button">Submit</button>
+                    </div>
+                </form>
             </div>
-            <div class="textarea-text">
-                <textarea id="yourMessage" name="Your message" placeholder="Your message" rows="4" cols="30" required></textarea>
-            </div>
-            <div class="btn-box button">
-                <button type="submit" class="button">Submit</button>
-            </div>
-        </form>
+        </div>
     </section>
 
     <!-- Footer section -->
-    <footer class="footer" id="footer">
+    <footer class="footer contactFooter" id="footer">
         <div class="footerText">
             <p data-i18n="copyright">Copyright &copy; Portfolio website made by Cesar MILESI - 2024 | All Rights Reserved</p>
         </div>
     </footer>
 
-    <script src="../js/header.js"></script>
     <script src="../js/darkMode.js"></script>
     <script src="../js/languageSelector.js"></script>
     <script src="../js/languageSwitcher.js"></script>
     <script src="../js/hamburgerMenu.js"></script>
+    <!-- <script src="../js/backToTop_header.js"></script> -->
+    <script src="../js/cookies.js"></script>
 </body>
 </html>

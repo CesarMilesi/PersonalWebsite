@@ -1,11 +1,23 @@
 {
 	"English": {
-		"workTitle": "Coordinator of Digital Communication"
+		"contact_Title": "Contact <span>Me !</span>",
+		"contact_Text": "If you have any inquiries or question, feel free to reach out to me by clicking on the mail or by filling the contact form.",
+		"mailMe": "<p data-i18n='mailMe'>Mail me at</p><a href='mailto:cesarmb@sfr.fr'>cesarmb@sfr.fr</a>",
+		"sendMessage_Title": "Send <span>me</span> a message <span><i class='bx bx-rocket'></i></span>",
+		"submitButton": "Submit"
 	},
 	"Français": {
-		"workTitle": "Chargé de communication digitale"
+		"contact_Title": "Contactez-<span>Moi !</span>",
+		"contact_Text": "Si vous une quelconque demande ou question, n'hésitez pas à me contacter en cliquant sur le mail ou en remplissant le formulaire de contact.",
+		"mailMe": "<p data-i18n='mailMe'>Envoyez-moi un mail à</p><a href='mailto:cesarmb@sfr.fr'>cesarmb@sfr.fr</a>",
+		"sendMessage_Title": "Envoyez-<span>moi</span> un message <span><i class='bx bx-rocket'></i></span>",
+		"submitButton": "Envoyer"
 	},
     "日本語": {
-        "workTitle": "デジタルコミュニケーション・マネージャー"
+        "contact_Title": "<span>お気軽に</span>お問い合わせください。",
+		"contact_Text": "ご質問や機会がありましたら、メールをクリックするまたはお問い合わせフォームを通じてお気軽にお問い合わせください。",
+		"mailMe": "<a href='mailto:cesarmb@sfr.fr'>cesarmb@sfr.fr</a><p data-i18n='mailMe'>にメールしてください。</p>",
+		"sendMessage_Title": "<span>メッセージ</span>を送ってください。 <span><i class='bx bx-rocket'></i></span>",
+		"submitButton": "送信"
     }
 }

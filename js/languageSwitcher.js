@@ -1,9 +1,3 @@
-// let languageStored = localStorage.getItem('selectedLanguage') || 'EN';
-// console.log("LOL : ", languageStored);    
-// let data = [(selectedLanguage, languageStored.innerHTML), ('translations', null)];
-// console.log("Selected : ", selectedLanguage.innerHTML);
-// console.log("Language : ", localStorage.getItem('selectedLanguage'));
-
 /* Asynchronously fetches JSON content for the specified page and updates translations.
 This method fetches multiple JSON files, merges their contents,
 and updates the translations data property with the merged data.
@@ -15,8 +9,23 @@ Parameters:
                 Calls the updateContent method to update the page content.
 */
 async function fetchJsonContent(pageName) {
-    const baseDirectory = pageName === 'index' ? '.' : '..';
-    const jsonFiles = ['nav', pageName, 'footer'];
+    let startUrl = '';
+    let baseUri = window.location.href;
+    switch (baseUri != null) {
+        case (baseUri.match("index") != null):
+            startUrl = '.';
+            break;
+        case (baseUri.match("projects") != null):
+            startUrl = '../..';
+            break;
+        default:
+            startUrl = '..';
+            break;
+    }
+    
+    const baseDirectory = startUrl;
+    // const baseDirectory = pageName === 'index' ? '.' : '..';
+    const jsonFiles = ['nav', pageName, 'footer', 'cookies'];
 
     /* Asynchronously fetches JSON content for all JSON files associated with the current page.
         * This block uses Promise.all() to concurrently fetch JSON files (nav, pagename & footer) for each file in the jsonFiles array.
@@ -26,7 +35,20 @@ async function fetchJsonContent(pageName) {
         */
     try {
         const results = await Promise.all(jsonFiles.map(async jsonFile => {
-            const filePath = `${baseDirectory}/json/${jsonFile}.json`;
+            let file = '';
+            switch (jsonFile != null) {
+                case (jsonFile.match("Project") != null):
+                    file = 'projects/' + jsonFile;
+                    break;
+                case (jsonFile.match('') === null || jsonFile.length === 0):
+                    file = 'index';
+                    break;
+                default:
+                    file = jsonFile;
+                    break;
+            }
+            // let file = jsonFile === '' ? 'index' : jsonFile;
+            const filePath = `${baseDirectory}/json/${file}.json`;
             const response = await fetch(filePath);
             if (!response.ok) {
                 throw new Error(`HTTP error! Status: ${response.status}`);
@@ -59,7 +81,7 @@ async function fetchJsonContent(pageName) {
 * and updates the innerHTML of elements with data-i18n attribute to display translated text.
 * It retrieves translations for the selected language and applies them to the corresponding elements.
 */
-function updateContent() {  
+function updateContent() {
     if (this.translations) {
         // Set HTML lang attribute to selected language
         document.documentElement.lang = this.selectedLanguage.innerHTML;

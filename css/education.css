@@ -1,8 +1,23 @@
+/*Light theme colors*/
 :root {
-    --first-color: #081b29;
-    --second-color: #112e42;
-    --main-color: #00abf0;
-    --text-color: #ededed;
+    --headerBackground-color: #99AAFF;
+    --heading-color: #5562D9;
+    --name-color: #3D45B3;
+    --text-color: #1A1B2C;
+    --boxBorder-color: #5562D9;
+    --year-color: #3D45B3;
+    --buttonTextHover-color: #3D45B3;
+}
+
+/*Dark theme colors*/
+:root.darkTheme {
+    --headerBackground-color: #2f355b;
+    --heading-color: #8C9BE8;
+    --name-color: #B9C5F3;
+    --text-color: #F0F4FF;
+    --boxBorder-color: #8C9BE8;
+    --year-color: #B9C5F3;
+    --buttonTextHover-color: #B9C5F3;
 }
 
 /* Education section */
@@ -14,6 +29,30 @@
     flex-direction: column;
     min-height: auto;
     padding-bottom: 5rem;
+}
+
+.education .heading {
+    color: var(--heading-color);
+}
+
+.education span {
+    color: var(--name-color);
+}
+
+.education ul li {
+    color: var(--text-color);
+    margin: 2rem 0 1rem 2rem;
+    font-size: 1.8rem;
+}
+
+.education ul li a {
+    color: var(--text-color);
+    text-decoration: underline;
+}
+
+.education ul li a:hover {
+    /* text-decoration: underline; */
+    color: var(--buttonTextHover-color);
 }
 
 .education-row {
@@ -31,12 +70,13 @@
 }
 
 .education-column .title {
-    font-size: 2.5rem;
+    font-size: 3rem;
     margin: 0 0 1.5rem 2rem;
+    color: var(--heading-color);
 }
 
 .education-column .education-box {
-    border-left: .2rem solid var(--main-color);
+    border-left: .2rem solid var(--boxBorder-color);
 }
 
 .education-box .education-content {
@@ -51,14 +91,14 @@
     left: -1rem;
     width: 2rem;
     height: 2rem;
-    background: var(--main-color);
+    background: var(--headerBackground-color);
     border-radius: 50%;
 }
 
 .education-content .content {
     position: relative;
     padding: 1.5rem;
-    border: .2rem solid var(--main-color);
+    border: .2rem solid var(--boxBorder-color);
     border-radius: .6rem;
     margin-bottom: 2rem;
     overflow: hidden;
@@ -71,7 +111,7 @@
     left: 0;
     width: 0;
     height: 100%;
-    background: var(--second-color);
+    background: var(--headerBackground-color);
     z-index: -1; /*Put red rectangle behind text*/
     transition: .5s;
 }
@@ -82,7 +122,7 @@
 
 .education-content .content .year {
     font-size: 1.5rem;
-    color: var(--main-color);
+    color: var(--year-color);
     padding-bottom: .5rem;
 }
 
@@ -92,9 +132,11 @@
 
 .education-content .content h3 {
     font-size: 2rem;
+    color: var(--heading-color);
 }
 
 .education-content .content p {
     font-size: 1.6rem;
     padding-top: .5rem;
+    color: var(--text-color);
 }

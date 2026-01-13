@@ -15,5 +15,6 @@ circles.forEach(e => {
     const pointsMarked = e.querySelectorAll('.points');
     for (let i = 0; i < percent; i++) {
         pointsMarked[i].classList.add('marked');
+        pointsMarked[i].classList.add('animate');
     }
 });

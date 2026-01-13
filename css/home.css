@@ -1,24 +1,41 @@
-/*Dark theme colors*/
-:root.darkTheme {
-	--first-color: #081b29;
-    --second-color: #112e42;
-    --text-color: #333;
-    --main-color: #00abf0;
-    --box-shadow: #07263b;
-    --link-icon: #333333;
-}
-
 /*Light theme colors*/
 :root {
-    --first-color: #081b29;
-    --second-color: #112e42;
-    --text-color: #ededed;
-    --main-color: #00abf0;
-    --box-shadow: #07263b;
-    --link-icon: #333333;
-    --languageList-background: #ffffff;
-    --languageList-border: #f8f8f8;
-    --countries-color: #000;
+    --heading-color: #5562D9;
+    --name-color: #3D45B3;
+    --work-color: #5562D9;
+    --text-color: #1A1B2C;
+
+    --buttonText-color: #EBEFFF;
+    --buttonBackground-color: #5562D9;
+    --buttonBackgroundHover-color: #EBEFFF;
+    --buttonTextHover-color: #3D45B3;
+    --buttonBorder-color: #5562D9;
+
+    --buttonTextInverse-color: #3D45B3;
+    --buttonBackgroundHoverInverse-color: #5562D9;
+    --buttonTextHoverInverse-color: #EBEFFF;
+
+    --imageHover-color: #5562D9;
+}
+
+/*Dark theme colors*/
+:root.darkTheme {
+    --heading-color: #8C9BE8;
+    --name-color: #B9C5F3;
+    --work-color: #8C9BE8;
+    --text-color: #F0F4FF;
+
+    --buttonText-color: #2F355B;
+    --buttonBackground-color: #8C9BE8;
+    --buttonBackgroundHover-color: #2F355B;
+    --buttonTextHover-color: #B9C5F3;
+    --buttonBorder-color: #8C9BE8;
+
+    --buttonTextInverse-color: #B9C5F3;
+    --buttonBackgroundHoverInverse-color: #8C9BE8;
+    --buttonTextHoverInverse-color: #2F355B;
+
+    --imageHover-color: #8C9BE8;
 }
 
 .home {
@@ -28,6 +45,7 @@
     gap: 1.5rem;
     min-height: 100vh;
     align-items: center;
+    margin-top: 4rem;
 }
 
 .home-content {
@@ -46,60 +64,44 @@
     margin-left: 6rem;
     border-radius: 50%;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
-    cursor: pointer;
+    margin-top: 5rem;
 }
 
 .home .image img:hover {
-    box-shadow: 0 5px 15px var(--main-color);
-}
-
-.social-mediaBis a {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 4rem;
-    height: 4rem;
-    background: transparent;
-    font-size: 2.5rem;
-    border: 0.2rem solid transparent;
-    margin: 3rem 1.5rem 3rem 0;
-    transition: 0.3s ease;
-    color: var(--link-icon);
-    border-radius: 50%;
-}
-
-.social-mediaBis a:hover {
-    color: var(--text-color);
-    transform: scale(1.5) translateY(-5px);
+    box-shadow: 0 5px 15px var(--imageHover-color);
 }
 
 .home-content h1 {
-    font-size: 5.5rem;
+    font-size: 5rem;
     font-weight: 700;
     line-height: 2;
+    color: var(--heading-color);
 }
 
 .home-content h1 span {
-    color: var(--text-color);
+    color: var(--name-color);
 }
 
 .home-content h3 {
     font-size: 3.2rem;
-    font-weight: 700;
-    color: transparent;
-    /* width: max-content; */
-    -webkit-text-stroke: .7px var(--main-color); /*Width & Color of text*/
+    color: var(--work-color);
+    font-style: italic;
+    /* -webkit-text-stroke: .1rem var(--work-color); Width & Color of text */
+    /* font-weight: 800; */
 }
 
 .home-content p {
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     margin: 3rem 0 4rem;
+    color: var(--text-color);
 }   
 
 .text-animation {
     position: relative;
     /* width: 36rem; */
 }
+
+/* BUTTONS */
 
 .btn-box {
     position: relative;
@@ -116,34 +118,16 @@
     align-items: center;
     width: 16rem;
     height: 100%;
-    background-color: var(--main-color);
-    border: .2rem solid var(--main-color);
+    background-color: var(--buttonBackground-color);
+    border: .2rem solid var(--buttonBorder-color);
     border-radius: .8rem;
     font-size: 2rem;
     font-weight: 600;
-    letter-spacing: .1rem;
-    color: var(--first-color);
+    /* letter-spacing: .1rem; */
+    color: var(--buttonText-color);
     z-index: 1;
     overflow: hidden;
     transition: .5s;
-}
-
-/* Effect for second button */
-.btn-box .button:nth-child(2) {
-    background: transparent;
-    color: var(--main-color);
-}
-
-.btn-box .button:nth-child(2)::before {
-    background-color: var(--main-color);
-}
-
-.btn-box .button:nth-child(2):hover {
-    color: var(--first-color);
-}
-
-.btn-box .button:hover {
-    color: var(--main-color);
 }
 
 .btn-box .button::before {
@@ -153,57 +137,31 @@
     left: 0;
     width: 0;
     height: 100%;
-    background: var(--first-color);
+    background: var(--buttonBackgroundHover-color);
     z-index: -1;
     transition: .5s;
+}
+
+.btn-box .button:hover {
+    color: var(--buttonTextHover-color);
+    background-color: var(--buttonBackgroundHover-color);
 }
 
 .btn-box .button:hover::before {
     width: 100%;
 }
 
-.social-media {
-    /* position: absolute;
-    bottom: 4rem; */
-    width: 120px;
-    margin: 5rem 0;
-    display: flex;
-    justify-content: space-between;
+/* Effect for second button */
+.btn-box .button:nth-child(2) {
+    color: var(--buttonTextInverse-color);
+    background: var(--buttonBackgroundHover-color);
 }
 
-.social-media a {
-    position: relative;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    width: 40px;
-    height: 40px;
-    background: transparent;
-    border: .2rem solid var(--main-color);
-    border-radius: 50%;
-    font-size: 20px;
-    color: var(--main-color);
-    z-index: 1;
-    overflow: hidden;
-    transition: .5s;
+.btn-box .button:nth-child(2)::before {
+    background: var(--buttonBackgroundHoverInverse-color);
 }
 
-.social-media a:hover {
-    color: var(--first-color);
-}
-
-.social-media a::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 0;
-    height: 100%;
-    background: var(--main-color);
-    z-index: -1; /*With overflow hidden, put red square behind the circle*/
-    transition: .5s;
-}
-
-.social-media a:hover::before {
-    width: 100%;
+.btn-box .button:nth-child(2):hover {
+    color: var(--buttonTextHoverInverse-color);
+    background-color: var(--buttonBackgroundHoverInverse-color);
 }

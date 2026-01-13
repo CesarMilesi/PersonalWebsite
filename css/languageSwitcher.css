@@ -1,25 +1,13 @@
-/*Dark theme colors*/
-:root.darkTheme {
-	--first-color: #081b29;
-    --second-color: #112e42;
-    --text-color: #333;
-    --main-color: #00abf0;
-    --box-shadow: #07263b;
-    --link-icon: #333333;
-}
-
 /*Light theme colors*/
 :root {
-    --first-color: #081b29;
-    --second-color: #112e42;
-    --text-color: #ededed;
-    --main-color: #00abf0;
-    --box-shadow: #07263b;
-    --link-icon: #333333;
-    --languageList-background: #ffffff;
-    --languageList-border: #f8f8f8;
-    --countries-color: #000;
-    --language-hover: #f2f2f2;
+    --menuLanguageBackground-color: #C2CEFF;
+    --menuLanguageHover-color: #99AAFF;
+}
+
+/*Dark theme colors*/
+:root.darkTheme {
+    --menuLanguageBackground-color: #3D467E;
+    --menuLanguageHover-color: #4F5CAD;
 }
 
 .drop-down {
@@ -27,7 +15,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: var(--first-color);
+    background-color: var(--menuLanguageBackground-color);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0);
     width: 100px;
     padding: 0.5rem 1rem;
@@ -50,7 +38,7 @@
 }
 
 .list {
-    background-color: var(--first-color);
+    /* background-color: #fff; */
     position: absolute;
     top: 45px;
     left: 0;
@@ -71,7 +59,7 @@
 }
 
 .language:hover {
-    background-color: var(--countries-color);
+    background-color: var(--menuLanguageHover-color);
 }
 
 .show {
@@ -80,87 +68,14 @@
 
 .selectedLanguage,.text {
     font-size: 1.2rem;
+    color: var(--text-color);
 }
 
 .jp {
-    font-weight: bold;
+    /* font-weight: bold; */
     font-size: 1.3rem;
 }
 
-/* .lang-menu {
-    margin-top: 0.1rem;
-    position: relative;
+.list.show {
+    background-color: var(--menuLanguageBackground-color);
 }
-
-.lang-menu:hover ul {
-    display: block;
-}
-
-.lang-menu ul {
-    display: none;
-    position: absolute;
-    margin: 0;
-    padding: 0;
-    top: 3rem;
-    left: 0;
-    background-color: var(--languageList-background);
-    border: .2rem solid var(--languageList-border);
-    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
-    font-size: 1.2rem;
-    border-radius: 0.2rem;
-}
-
-.lang-menu ul li {
-    list-style: none;
-    display: flex;
-    justify-content: space-between;
-}
-
-.lang-menu ul li a {
-    color: var(--countries-color);
-    width: 120px;
-    display: block;
-    padding: 0.8rem 1rem;
-}
-
-.lang-menu ul li a:hover {
-    background-color: var(--language-hover);
-}
-
-.lang-menu ul li a:before {
-    content: '';
-    display: inline-block;
-    width: 32px;
-    height: 24px;
-    margin-right: 1rem;
-    vertical-align: middle;
-}
-
-.selected-lang {
-    cursor: pointer;
-    display: flex;
-    justify-content: space-between;
-    line-height: 2.5;
-    width: 9rem;
-    font-size: 1.2rem;
-}
-
-.selected-lang:before {
-    content: '';
-    display: block;
-    width: 32px;
-    height: 24px;
-    background-image: url(/images/icons/flags/gb.svg);
-}
-
-.fr:before {
-    background-image: url(/images/icons/flags/fr.svg);
-    width: 32px;
-    height: 24px;
-}
-
-.jp:before {
-    background-image: url(/images/icons/flags/jp.svg);
-    width: 32px;
-    height: 24px;
-} */

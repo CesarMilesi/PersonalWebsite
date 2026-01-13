@@ -1,28 +1,16 @@
-/*Dark theme colors*/
-:root.darkTheme {
-	--first-color: #081b29;
-    --second-color: #112e42;
-    --text-color: #333;
-    --main-color: #00abf0;
-    --box-shadow: #07263b;
-    --link-icon: #333333;
-}
-
 /*Light theme colors*/
 :root {
-    --first-color: #081b29;
-    --second-color: #112e42;
-    --text-color: #ededed;
-    --main-color: #00abf0;
-    --box-shadow: #07263b;
-    --link-icon: #333333;
-    --languageList-background: #ffffff;
-    --languageList-border: #f8f8f8;
-    --countries-color: #000;
+    --text-color: #1A1B2C;
+}
+
+/*Dark theme colors*/
+:root.darkTheme {
+    --text-color: #F0F4FF;
 }
 
 #menu-icon {
     font-size: 3.5rem;
     color: var(--text-color);
     display: none;
+    cursor: pointer;
 }

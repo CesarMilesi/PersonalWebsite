@@ -7,10 +7,11 @@
 
     <!--Styles-->
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/cookies.css">
     <link rel="stylesheet" href="../css/themeSwitcher.css">
+    <link rel="stylesheet" href="../css/education.css">
     <link rel="stylesheet" href="../css/languageSwitcher.css">
     <link rel="stylesheet" href="../css/hamburgerMenu.css">
-    <link rel="stylesheet" href="../css/education.css">
     <link rel="stylesheet" href="../css/skills.css">
     <link rel="stylesheet" href="../css/mediaQueries.css">
 
@@ -21,98 +22,157 @@
     <link rel="icon" type="image/x-icon" href="../images/icons/favicon.ico">
 </head>
 <body>
+    <!-- Back to top -->
+    <div id="progress">
+        <span class="progress-value"><i class="bx bx-up-arrow-alt"></i></span>
+    </div>
+
+    <div class="cookiesWrapper">
+        <div class="cookiesHeader">
+            <i class="bx bx-cookie"></i>
+            <h2 data-i18n="cookiesTitle">Cookies</h2>
+        </div>
+
+        <div class="cookiesData">
+            <p data-i18n="cookieText">We use cookies on this website in order to provide optimal services to each visitors. If you agree with the use of cookies, please select 'Accept'. You can check our <a href="#">privacy policy</a> for more details.</p>
+        </div>
+
+        <div class="cookiesButtons">
+            <button data-i18n="cookieAccept" class="acceptButton" type="button">Accept</button>
+            <button data-i18n="cookieDecline" class="declineButton" type="button">Decline</button>
+        </div>
+    </div>
+
     <!-- Header section -->
     <header class="header">
-        <a href="../index.html" class="logo">César</a>
-        <nav class="navbar">
-            <a href="../index.html" class="active">Home</a>
-            <a href="../pages/about.html">About</a>
-            <a href="../pages/education.html">Education</a>
-            <a data-i18n="projet" href="../pages/projects.html">Projects</a>
-            <a href="../pages/contact.html">Contact</a>
-        </nav>
-        <div class="right-icons">
-            <button type="button" id="darkModeToggle" class="darkModeToggle">
-                <img id="iconTheme" width="35" height="35" src="../images/icons/sun.svg" alt="Sun">
-            </button>
-            <div class="drop-down">
-                <div class="wrapper">
-                    <img src="../images/icons/flags/EN.svg" alt="English flag" class="selectedFlag">
-                    <div id="selectedLanguage" class="selectedLanguage" onchange="fetchJsonContent('education')">English</div>
+        <nav>
+            <div class="navBar">
+                <div class="logoHamburger">
+                    <div class="bx bx-menu" id="menu-icon"></div>
+                    <span class="logo"><a data-i18n="logo" href="../index.html">César</a></span>
                 </div>
-                <div class="list">
-                    <div class="language">
-                        <img src="../images/icons/flags/EN.svg" alt="English flag">
-                        <div class="text">English</div>
-                    </div>
-                    <div class="language">
-                        <img src="../images/icons/flags/FR.svg" alt="French flag">
-                        <div class="text">Français</div>
-                    </div>
-                    <div class="language">
-                        <img src="../images/icons/flags/JP.svg" alt="Japanese flag">
-                        <div class="text jp">日本語</div>
+                <div class="menu">
+                    <ul class="nav-links">
+                        <li><a data-i18n="home" href="../index.html">Home</a></li>
+                        <li><a data-i18n="about" href="../pages/aboutMe.html">About</a></li>
+                        <li><a data-i18n="education" href="../pages/education.html" class="active">Education</a></li>
+                        <li><a data-i18n="projet" href="../pages/projects.html">Projects</a></li>
+                        <li><a data-i18n="contact" href="../pages/contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="darkLight-languageBox">
+                    <button type="button" id="darkModeToggle" class="darkModeToggle">
+                        <img id="iconTheme" width="35" height="35" src="../images/icons/sun.svg" alt="Sun">
+                    </button>
+                    <div class="drop-down">
+                        <div class="wrapper">
+                            <img src="../images/icons/flags/EN.svg" alt="English flag" class="selectedFlag">
+                            <div id="selectedLanguage" class="selectedLanguage" onchange="fetchJsonContent('education')">English</div>
+                        </div>
+                        <div class="list">
+                            <div class="language">
+                                <img src="../images/icons/flags/EN.svg" alt="English flag">
+                                <div class="text">English</div>
+                            </div>
+                            <div class="language">
+                                <img src="../images/icons/flags/FR.svg" alt="French flag">
+                                <div class="text">Français</div>
+                            </div>
+                            <div class="language">
+                                <img src="../images/icons/flags/JP.svg" alt="Japanese flag">
+                                <div class="text jp">日本語</div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="bx bx-menu" id="menu-icon"></div>
+        </nav>
     </header>
 
     <!-- Education section -->
     <section class="education" id="education">
-        <h2 class="heading">My <span>Journey</span></h2>
+        <h2 data-i18n="page_Title" class="heading">My <span>Journey</span></h2>
 
         <div class="education-row">
             <div class="education-column">
-                <h3 class="title">Education</h3>
+                <h3 data-i18n="education_Title" class="title">Education</h3>
                 <div class="education-box">
                     <div class="education-content">
                         <div class="content">
-                            <div class="year"><i class="bx bxs-calendar"></i>2017-2018</div>
-                            <h3>Master Degree - University</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id laudantium accusantium, distinctio totam reiciendis beatae? Consequatur beatae doloremque perferendis quibusdam!</p>
+                            <div class="year"><i class="bx bxs-calendar"></i>2015 - 2018</div>
+                            <h3 data-i18n="education_Box1_Title">Baccalaurat (A level equivalent)</h3>
+                            <ul>
+                                <li data-i18n="education_Box1_List1">Specialization : Maths</li>
+                                <li data-i18n="education_Box1_List2">English European Section</li>
+                            </ul>
                         </div>
                     </div>
                     <div class="education-content">
                         <div class="content">
-                            <div class="year"><i class="bx bxs-calendar"></i>2017-2018</div>
-                            <h3>Master Degree - University</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id laudantium accusantium, distinctio totam reiciendis beatae? Consequatur beatae doloremque perferendis quibusdam!</p>
+                            <div class="year"><i class="bx bxs-calendar"></i>2018 - 2020</div>
+                            <h3 data-i18n="education_Box2_Title">Preparatory cycle - EPITA</h3>
+                            <ul>
+                                <li data-i18n="education_Box2_List1">Basics of programming and engineering classes</li>
+                                <li data-i18n="education_Box2_List2">Semester 4 in Dublin at Griffith College (02/2020 - 05-2020)</li>
+                            </ul>
                         </div>
                     </div>
                     <div class="education-content">
                         <div class="content">
-                            <div class="year"><i class="bx bxs-calendar"></i>2017-2018</div>
-                            <h3>Master Degree - University</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id laudantium accusantium, distinctio totam reiciendis beatae? Consequatur beatae doloremque perferendis quibusdam!</p>
+                            <div class="year"><i class="bx bxs-calendar"></i>2020 - 2023</div>
+                            <h3 data-i18n="education_Box3_Title">Expert in Computer Engineering - EPITA</h3>
+                            <ul>
+                                <li data-i18n="education_Box3_List1">Specialization : Multimedia and Web development</li>
+                                <li data-i18n="education_Box3_List2">Expert cycle through apprenticeship</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="education-content">
+                        <div class="content">
+                            <div data-i18n="education_Box4_Date" class="year"><i class="bx bxs-calendar"></i>09/2023 - 09/2024</div>
+                            <h3 data-i18n="education_Box4_Title">Degree in Multilingual Web Communication - Faculty of Languages, University of Strasbourg</h3>
+                            <ul>
+                                <li data-i18n="education_Box4_List1">Management &amp; improvement of the <a href="https://mastercaweb.unistra.fr/en/">CAWEB master&rsquo;s website</a></li>
+                                <li data-i18n="education_Box4_List2">Programming, UX/UI Design, Localization (FR/EN/JP), Project Management, SEO, Web communication</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
             </div>
 
             <div class="education-column">
-                <h3 class="title">Experience</h3>
+                <h3 data-i18n="professional_Title" class="title">Professional Experience</h3>
                 <div class="education-box">
                     <div class="education-content">
                         <div class="content">
-                            <div class="year"><i class="bx bxs-calendar"></i>2017-2018</div>
-                            <h3>Web Developer - Company</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id laudantium accusantium, distinctio totam reiciendis beatae? Consequatur beatae doloremque perferendis quibusdam!</p>
+                            <div data-i18n="professional_Box1_Date" class="year"><i class="bx bxs-calendar"></i>07/2019 - 08/2019</div>
+                            <h3 data-i18n="professional_Box1_Title">2 Months Internship - Mecaroll</h3>
+                            <ul>
+                                <li data-i18n="professional_Box1_List1">Discovering how machines are functioning (lifting &amp; handling equipment)</li>
+                                <li data-i18n="professional_Box1_List2">Creation of Excel dynamic and professional tables</li>
+                            </ul>
                         </div>
                     </div>
                     <div class="education-content">
                         <div class="content">
                             <div class="year"><i class="bx bxs-calendar"></i>2017-2018</div>
-                            <h3>Web Developer - Company</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id laudantium accusantium, distinctio totam reiciendis beatae? Consequatur beatae doloremque perferendis quibusdam!</p>
+                            <h3 data-i18n="professional_Box2_Title">Web Developer - ConseQuant</h3>
+                            <ul>
+                                <li data-i18n="professional_Box2_List1">Conception of business applications in the field of finance</li>
+                                <li data-i18n="professional_Box2_List2">Creation and development of web solutions (websites) and Excel add-ins</li>
+                            </ul>
                         </div>
                     </div>
                     <div class="education-content">
                         <div class="content">
                             <div class="year"><i class="bx bxs-calendar"></i>2017-2018</div>
-                            <h3>Web Developer - Company</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id laudantium accusantium, distinctio totam reiciendis beatae? Consequatur beatae doloremque perferendis quibusdam!</p>
+                            <h3 data-i18n="professional_Box3_Title">Digital Communication Officer / Internship - Manga, Anime &amp; Japan Arts Society</h3>
+                            <ul>
+                                <li data-i18n="professional_Box3_List1">Digital communication - Exhibitions</li>
+                                <li data-i18n="professional_Box3_List2">Enhancement of websites for the company and exhibitions</li>
+                                <li data-i18n="professional_Box3_List3">Creation of flyers for exhibitions’ promotion</li>
+                                <li data-i18n="professional_Box3_List4">Translation (FR/EN &rarr; JP &amp; JP &rarr; FR/EN)</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -122,78 +182,82 @@
 
     <section id="skills" class="skills">
         <div class="main-text">
-            <span>Technical & Professional</span>
-            <h2>My Skills</h2>
+            <span data-i18n="technical_Title" class="title">Technical &amp; Professional</span>
+            <h2 data-i18n="skills_Title">My <span>Skills</span></h2>
         </div>
         <div class="skill-main">
             <div class="skill-left">
-                <h3>Programming Skills</h3>
+                <h3 data-i18n="programmingSkills_Title">Programming Skills</h3>
                 <div class="skill-bar">
                     <div class="info">
                             <p>C#</p>
-                            <p>55%</p> <!--Faire corresponde au % dans le CSS-->
+                            <p>75%</p> <!--Faire correspondre au % dans le CSS-->
                     </div>
                     <div class="bar">
-                        <span class="csharp"></span>
+                        <span class="fourStars animate"></span>
                     </div>
                 </div>
                 <div class="skill-bar">
                    <div class="info">
-                        <p>HTML</p>
-                        <p>72%</p>
+                        <p>HTML, CSS, JavaScript</p>
+                        <p>60%</p>
                    </div>
                    <div class="bar">
-                        <span class="html"></span>
+                        <span class="threeStars animate"></span>
                     </div>
                 </div>
                 <div class="skill-bar">
                     <div class="info">
-                         <p>CSS</p>
-                         <p>90%</p>
+                         <p>Java, Python, OCaml, SQL, Android, Swift, Shell scripts</p>
+                         <p>35%</p>
                     </div>
                     <div class="bar">
-                        <span class="css"></span>
+                        <span class="twoStars animate"></span>
                     </div>
                 </div>
                 <div class="skill-bar">
                     <div class="info">
-                         <p>JavaScript</p>
-                         <p>36%</p>
+                         <p>Angular, C++, XML, Typescript, PHP</p>
+                         <p>10%</p>
                     </div>
                     <div class="bar">
-                        <span class="js"></span>
+                        <span class="oneStar animate"></span>
                     </div>
                 </div>
             </div>
             <div class="skill-right">
-                <h3>Web skills</h3>
+                <h3 data-i18n="webSkills_Title">Web skills</h3>
                 <div class="professional">
                     <div class="box">
-                        <div class="circle" data-dots="80" data-percent="90"></div>
+                        <div class="circle" data-dots="70" data-percent="60"></div>
                         <div class="text">
-                            <span>90%</span>
-                            <small>CMS</small>
-                        </div>
-                    </div>
-                    <div class="box">
-                        <div class="circle" data-dots="80" data-percent="65"></div>
-                        <div class="text">
-                            <span>65%</span>
-                            <small>UX/UI</small>
-                        </div>
-                    </div>
-                    <div class="box">
-                        <div class="circle" data-dots="80" data-percent="30"></div>
-                        <div class="text">
-                            <span>30%</span>
-                            <small>DTP : Photoshop, Illustrator, Indesign</small>
+                            <span class="up">60%</span>
+                            <!-- <small>CMS</small> -->
+                             <p>CMS : Wordpress, Webador</p>
                         </div>
                     </div>
                     <div class="box">
                         <div class="circle" data-dots="80" data-percent="40"></div>
                         <div class="text">
-                            <span>40%</span>
-                            <small>Localization (FR/EN/JP)</small>
+                            <span class="up">40%</span>
+                            <!-- <small>UX/UI</small> -->
+                             <p data-i18n="webSkills_Circle2_Text">UX/UI Design : Mockups (Figma), UX Report</p>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="circle" data-dots="90" data-percent="30"></div>
+                        <div class="text">
+                            <span class="down">30%</span>
+                            <!-- <small>DTP : Photoshop, Illustrator, Indesign</small> -->
+                             <p data-i18n="webSkills_Circle3_Text">DTP : Photoshop, Illustrator, Indesign</p>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="circle" data-dots="100" data-percent="65"></div>
+                        <div class="text">
+                            <span class="down">65%</span>
+                            <!-- <small>Localization (FR/EN/JP)</small> -->
+                             <p data-i18n="webSkills_Circle4_Text">Localization (FR/EN/JP)</p>
                         </div>
                     </div>
                 </div>
@@ -203,42 +267,52 @@
 
     <section class="languages" id="languages">
         <div class="main-text">
-            <h2>My Languages</h2>
+            <h2 data-i18n="languagesSkills_Title">My <span>Languages</span></h2>
         </div>
-        <div class="timeline">
-            <div class="container left-container">
+        <div class="timeline animate">
+            <div class="container left-container animate">
                 <img src="../images/icons/timeline/FR_flag.png" alt="French flag">
                 <div class="text-box">
-                    <h2>French</h2>
-                    <small>Test</small>
-                    <p>Native language</p>
+                    <h2 data-i18n="languagesSkills_One_Title">French</h2>
+                    <!-- <small>Test</small> -->
+                    <p data-i18n="languagesSkills_One_Level">Level : Native</p>
                     <span class="left-container-arrow"></span>
                 </div>
             </div>
-            <div class="container right-container">
+            <div class="container right-container animate">
                 <img src="../images/icons/timeline/EN_flag.png" alt="English flag">
                 <div class="text-box">
-                    <h2>English</h2>
-                    <small>Test</small>
-                    <p>Native language</p>
+                    <h2 data-i18n="languagesSkills_Two_Title">English</h2>
+                    <!-- <small>Test</small> -->
+                    <p data-i18n="languagesSkills_Two_Level">Level : C1</p>
+                    <ul>
+                        <li data-i18n="languagesSkills_Two_List1">Cambridge English Certificate - B1</li>
+                        <li data-i18n="languagesSkills_Two_List2">TOEIC : 890 (2023)</li>
+                    </ul>
                     <span class="right-container-arrow"></span>
                 </div>
             </div>
-            <div class="container left-container">
+            <div class="container left-container animate">
                 <img src="../images/icons/timeline/JP_flag.png" alt="Japanese flag">
                 <div class="text-box">
-                    <h2>Japanese</h2>
-                    <small>Test</small>
-                    <p>Native language</p>
+                    <h2 data-i18n="languagesSkills_Three_Title">Japanese</h2>
+                    <!-- <small>Test</small> -->
+                    <p data-i18n="languagesSkills_Three_Level">Level : B2</p>
+                    <ul>
+                        <li data-i18n="languagesSkills_Three_List1">JLPT N2 (01/2024)</li>
+                        <li data-i18n="languagesSkills_Three_List2">JLPT N3 (07/2022)</li>
+                        <!-- <li>Finalist of the 3rd <a href="https://yume-pro.helte.jp/en/">Sail Yume Project</a></li> -->
+                        <li data-i18n="languagesSkills_Three_List3">Finalist of the 3rd Sail Yume Project</li>
+                    </ul>
                     <span class="left-container-arrow"></span>
                 </div>
             </div>
-            <div class="container right-container">
+            <div class="container right-container animate">
                 <img src="../images/icons/timeline/SP_flag.png" alt="Spanish flag">
                 <div class="text-box">
-                    <h2>Spanish</h2>
-                    <small>Test</small>
-                    <p>Native language</p>
+                    <h2 data-i18n="languagesSkills_Four_Title">Spanish</h2>
+                    <!-- <small>Test</small> -->
+                    <p data-i18n="languagesSkills_Four_Level">Level : A2</p>
                     <span class="right-container-arrow"></span>
                 </div>
             </div>
@@ -252,11 +326,13 @@
         </div>
     </footer>
 
-    <script src="../js/header.js"></script>
+    <script src="../js/backToTop_header.js"></script>
     <script src="../js/darkMode.js"></script>
     <script src="../js/languageSelector.js"></script>
     <script src="../js/languageSwitcher.js"></script>
     <script src="../js/hamburgerMenu.js"></script>
     <script src="../js/skills.js"></script>
+    <script src="../js/cookies.js"></script>
+    <script src="../js/appearSection.js"></script>
 </body>
 </html>

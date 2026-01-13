@@ -7,12 +7,18 @@
 
     <!--Styles-->
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/cookies.css">
     <link rel="stylesheet" href="css/themeSwitcher.css">
     <link rel="stylesheet" href="css/home.css">
     <link rel="stylesheet" href="css/about.css">
     <link rel="stylesheet" href="css/languageSwitcher.css">
     <link rel="stylesheet" href="css/hamburgerMenu.css">
     <link rel="stylesheet" href="css/mediaQueries.css">
+
+    <!-- Japanese font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
 
     <!--Additional classes for some icons effects-->
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
@@ -21,78 +27,117 @@
     <link rel="icon" type="image/x-icon" href="/images/icons/favicon.ico">
 </head>
 <body>
+    <!-- Back to top -->
+    <div id="progress">
+        <span class="progress-value"><i class="bx bx-up-arrow-alt"></i></span>
+    </div>
+
+    <div class="cookiesWrapper">
+        <div class="cookiesHeader">
+            <i class="bx bx-cookie"></i>
+            <h2 data-i18n="cookiesTitle">Cookies</h2>
+        </div>
+
+        <div class="cookiesData">
+            <p data-i18n="cookieText">We use cookies on this website in order to provide optimal services to each visitors. If you agree with the use of cookies, please select 'Accept'. You can check our <a href="#">privacy policy</a> for more details.</p>
+        </div>
+
+        <div class="cookiesButtons">
+            <button data-i18n="cookieAccept" class="acceptButton" type="button">Accept</button>
+            <button data-i18n="cookieDecline" class="declineButton" type="button">Decline</button>
+        </div>
+    </div>
+
     <!-- Header section -->
     <header class="header">
-        <a href="./index.html" class="logo">César</a>
-        <nav class="navbar">
-            <a href="./index.html" class="active">Home</a>
-            <a href="./pages/about.html">About</a>
-            <a href="./pages/education.html">Education</a>
-            <a data-i18n="projet" href="./pages/projects.html">Projects</a>
-            <a href="./pages/contact.html">Contact</a>
-        </nav>
-        <div class="right-icons">
-            <button type="button" id="darkModeToggle" class="darkModeToggle">
-                <img id="iconTheme" width="35" height="35" src="./images/icons/sun.svg" alt="Sun">
-            </button>
-            <div class="drop-down">
-                <div class="wrapper">
-                    <img src="./images/icons/flags/EN.svg" alt="English flag" class="selectedFlag">
-                    <div id="selectedLanguage" class="selectedLanguage" onch    ange="fetchJsonContent('index')">English</div>
+        <nav>
+            <div class="navBar">
+                <div class="logoHamburger">
+                    <div class="bx bx-menu" id="menu-icon"></div>
+                    <span class="logo"><a data-i18n="logo" href="./index.html">César</a></span>
                 </div>
-                <div class="list">
-                    <div class="language">
-                        <img src="./images/icons/flags/EN.svg" alt="English flag">
-                        <div class="text">English</div>
-                    </div>
-                    <div class="language">
-                        <img src="./images/icons/flags/FR.svg" alt="French flag">
-                        <div class="text">Français</div>
-                    </div>
-                    <div class="language">
-                        <img src="./images/icons/flags/JP.svg" alt="Japanese flag">
-                        <div class="text jp">日本語</div>
+                <div class="menu">
+                    <ul class="nav-links">
+                        <li><a data-i18n="home" href="./index.html" class="active">Home</a></li>
+                        <li><a data-i18n="about" href="./pages/aboutMe.html">About</a></li>
+                        <li><a data-i18n="education" href="./pages/education.html">Education</a></li>
+                        <li><a data-i18n="projet" href="./pages/projects.html">Projects</a></li>
+                        <li><a data-i18n="contact" href="./pages/contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="darkLight-languageBox">
+                    <button type="button" id="darkModeToggle" class="darkModeToggle">
+                        <img id="iconTheme" width="35" height="35" src="./images/icons/sun.svg" alt="Sun">
+                    </button>
+                    <div class="drop-down">
+                        <div class="wrapper">
+                            <img src="./images/icons/flags/EN.svg" alt="English flag" class="selectedFlag">
+                            <div id="selectedLanguage" class="selectedLanguage" onchange="fetchJsonContent('index')">English</div>
+                        </div>
+                        <div class="list">
+                            <div class="language">
+                                <img src="./images/icons/flags/EN.svg" alt="English flag">
+                                <div class="text">English</div>
+                            </div>
+                            <div class="language">
+                                <img src="./images/icons/flags/FR.svg" alt="French flag">
+                                <div class="text">Français</div>
+                            </div>
+                            <div class="language">
+                                <img src="./images/icons/flags/JP.svg" alt="Japanese flag">
+                                <div class="text jp">日本語</div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="bx bx-menu" id="menu-icon"></div>
+        </nav>
     </header>
 
     <!-- Home section -->
     <section class="home" id="home">
         <div class="home-content">
-            <h1>Hi, <br> I'm <span>César Milesi</span></h1>
-            <div class="text-animation">
-                <h3 data-i18n="workTitle">Coordinator of Digital Communication</h3>
+            <h1 data-i18n="title" class="title">Hi, <br> I'm <span>César Milesi</span></h1>
+            <div class="text-animation"> <!--Coordinator of Digital Communication-->
+                <h3 data-i18n="workTitle">Expert in Computer Engineering</h3>
             </div>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laboriosam est optio voluptatem aperiam eveniet culpa fugiat porro autem rem cum.</p>
+            <p data-i18n="homeText" class="text">
+                I finished 3 years of internship, working as a web developer. I am now
+                doing a master degree in Strasbourg (multilingual web communication) to
+                supplement my knowledge.
+                I am looking for a job in digital communication in Japan to apply my skills
+                in a professional environment.
+            </p>
             <div class="btn-box">
-                <a href="#" class="button">About Me</a>
-                <a href="#" class="button">Download CV</a>
+                <a data-i18n="aboutMeButton" href="./pages/aboutMe.html" class="button">About Me</a>
+                <a data-i18n="downloadCvButton" href="./cv/CV - EN version.pdf" download="English CV" class="button" id="download">Download CV</a>
             </div>
             <div class="social-mediaBis">
-                <a href="#"><i class="bx bxl-linkedin"></i></a>
-                <a href="#"><i class="bx bxl-github"></i></a>
+                <a href="https://www.linkedin.com/in/cesar-milesi/" target="_blank" aria-label="linkedin"><i class="bx bxl-linkedin"></i></a>
+                <a href="https://github.com/CesarMilesi" target="_blank" aria-label="github"><i class="bx bxl-github"></i></a>
             </div>
         </div>
         <div class="image">
-            <img src="./images/PhotoProfilAbout2.png" alt="introPhoto">
+            <img src="./images/ProfilPhoto.webp" alt="introPhoto">
         </div>
     </section>
 
     <section class="about" id="about">
         <div class="about-Img">
-            <img src="/images/PhotoProfilAbout4.png" alt="PP_About">
+            <img src="./images/AboutPhoto.png" alt="PP_About">
             <span class="circle-spin"></span>
         </div>
-        <div class="about-contentBis">
-            <h2 class="heading">About <span>Me</span></h2>
-            <h3>Coordinator of Digital Communication</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ullam ipsa repudiandae voluptatibus? Molestiae id fugit est laudantium iusto quas quasi ratione explicabo veniam, iure voluptate, voluptas odit magnam libero!</p>
+        <div class="about-content">
+            <h2 data-i18n="aboutTitle" class="heading title">About <span>Me</span></h2>
+            <h3 data-i18n="aboutWorkTitle">Coordinator in Digital Communication</h3>
+            <p data-i18n="home_aboutText" class="text">
+                Passionate about maths and technology, I enrolled in an engineering school of technology (EPITA).
+                Having graduated from this master's degree, I applied for the CAWEB master (multilingual web communication) in order to expand my skills as a coordinator in digital communication.
+                Interested about languages and eager to learn more about new fields, you can read more about the different experiences I had by clicking on the button below.
+            </p>
 
             <div class="btn-box buttons">
-                <a href="#" class="button">Read More</a>
+                <a data-i18n="readMoreButton" href="./pages/aboutMe.html" class="button">Read More</a>
             </div>
         </div>
     </section>
@@ -104,10 +149,12 @@
         </div>
     </footer>
 
-    <script src="./js/header.js"></script>
     <script src="./js/darkMode.js"></script>
     <script src="./js/languageSelector.js"></script>
     <script src="./js/languageSwitcher.js"></script>
     <script src="./js/hamburgerMenu.js"></script>
+    <script src="./js/cookies.js"></script>
+    <script src="./js/backToTop_header.js"></script>
+    <script src="./js/downloadCV.js"></script>
 </body>
 </html>

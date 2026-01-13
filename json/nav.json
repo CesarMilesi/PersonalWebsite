@@ -1,11 +1,26 @@
 {
 	"English": {
-		"projet": "Projects"
+		"logo": "César",
+		"home": "Home",
+		"about": "About",
+		"education": "Education",
+		"projet": "Projects",
+		"contact": "Contact"
 	},
 	"Français": {
-		"projet": "Projets"
+		"logo": "César",
+		"home": "Accueil",
+		"about": "À propos",
+		"education": "Éducation",
+		"projet": "Projets",
+		"contact": "Contact"
 	},
     "日本語": {
-        "projet": "プロジェクト"
+		"logo": "セザール",
+		"home": "ホーム",
+		"about": "自己紹介",
+		"education": "履歴書",
+		"projet": "ポートフォリオ",
+		"contact": "連絡先"
     }
 }

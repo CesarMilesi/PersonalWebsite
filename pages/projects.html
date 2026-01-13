@@ -7,8 +7,9 @@
 
     <!--Styles-->
     <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/projects.css">
+    <link rel="stylesheet" href="../css/cookies.css">
     <link rel="stylesheet" href="../css/themeSwitcher.css">
+    <link rel="stylesheet" href="../css/projects.css">
     <link rel="stylesheet" href="../css/languageSwitcher.css">
     <link rel="stylesheet" href="../css/hamburgerMenu.css">
     <link rel="stylesheet" href="../css/mediaQueries.css">
@@ -20,152 +21,121 @@
     <link rel="icon" type="image/x-icon" href="../images/icons/favicon.ico">
 </head>
 <body>
+    <!-- Back to top -->
+    <div id="progress">
+        <span class="progress-value"><i class="bx bx-up-arrow-alt"></i></span>
+    </div>
+
+    <div class="cookiesWrapper">
+        <div class="cookiesHeader">
+            <i class="bx bx-cookie"></i>
+            <h2 data-i18n="cookiesTitle">Cookies</h2>
+        </div>
+
+        <div class="cookiesData">
+            <p data-i18n="cookieText">We use cookies on this website in order to provide optimal services to each visitors. If you agree with the use of cookies, please select 'Accept'. You can check our <a href="#">privacy policy</a> for more details.</p>
+        </div>
+
+        <div class="cookiesButtons">
+            <button data-i18n="cookieAccept" class="acceptButton" type="button">Accept</button>
+            <button data-i18n="cookieDecline" class="declineButton" type="button">Decline</button>
+        </div>
+    </div>
+
     <!-- Header section -->
     <header class="header">
-        <a href="../index.html" class="logo">César</a>
-        <nav class="navbar">
-            <a href="../index.html" class="active">Home</a>
-            <a href="../pages/about.html">About</a>
-            <a href="../pages/education.html">Education</a>
-            <a data-i18n="projet" href="../pages/projects.html">Projects</a>
-            <a href="../pages/contact.html">Contact</a>
-        </nav>
-        <div class="right-icons">
-            <button type="button" id="darkModeToggle" class="darkModeToggle">
-                <img id="iconTheme" width="35" height="35" src="../images/icons/sun.svg" alt="Sun">
-            </button>
-            <div class="drop-down">
-                <div class="wrapper">
-                    <img src="../images/icons/flags/EN.svg" alt="English flag" class="selectedFlag">
-                    <div id="selectedLanguage" class="selectedLanguage" onchange="fetchJsonContent('projects')">English</div>
+        <nav>
+            <div class="navBar">
+                <div class="logoHamburger">
+                    <div class="bx bx-menu" id="menu-icon"></div>
+                    <span class="logo"><a data-i18n="logo" href="../index.html">César</a></span>
                 </div>
-                <div class="list">
-                    <div class="language">
-                        <img src="../images/icons/flags/EN.svg" alt="English flag">
-                        <div class="text">English</div>
-                    </div>
-                    <div class="language">
-                        <img src="../images/icons/flags/FR.svg" alt="French flag">
-                        <div class="text">Français</div>
-                    </div>
-                    <div class="language">
-                        <img src="../images/icons/flags/JP.svg" alt="Japanese flag">
-                        <div class="text jp">日本語</div>
+                <div class="menu">
+                    <ul class="nav-links">
+                        <li><a data-i18n="home" href="../index.html">Home</a></li>
+                        <li><a data-i18n="about" href="../pages/aboutMe.html">About</a></li>
+                        <li><a data-i18n="education" href="../pages/education.html">Education</a></li>
+                        <li><a data-i18n="projet" href="../pages/projects.html" class="active">Projects</a></li>
+                        <li><a data-i18n="contact" href="../pages/contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="darkLight-languageBox">
+                    <button type="button" id="darkModeToggle" class="darkModeToggle">
+                        <img id="iconTheme" width="35" height="35" src="../images/icons/sun.svg" alt="Sun">
+                    </button>
+                    <div class="drop-down">
+                        <div class="wrapper">
+                            <img src="../images/icons/flags/EN.svg" alt="English flag" class="selectedFlag">
+                            <div id="selectedLanguage" class="selectedLanguage" onchange="fetchJsonContent('projects')">English</div>
+                        </div>
+                        <div class="list">
+                            <div class="language">
+                                <img src="../images/icons/flags/EN.svg" alt="English flag">
+                                <div class="text">English</div>
+                            </div>
+                            <div class="language">
+                                <img src="../images/icons/flags/FR.svg" alt="French flag">
+                                <div class="text">Français</div>
+                            </div>
+                            <div class="language">
+                                <img src="../images/icons/flags/JP.svg" alt="Japanese flag">
+                                <div class="text jp">日本語</div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="bx bx-menu" id="menu-icon"></div>
+        </nav>
     </header>
 
     <!-- Projects section -->
-    <!-- <section class="projects" id="projects">
-        <h2 class="heading">My <span>Projects</span></h2>
-
-        <div class="projectsContainer">
-            <div class="projectContainer">
-                <img src="../images/PhotoProfilAbout2.png" alt="PP"></a>
-                <div class="projectInfos">
-                    <h4>Web Design</h4>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat ipsa nesciunt vel commodi voluptatem laudantium hic ipsam illo possimus expedita.</p>
-                    <a href="#"><i class="bx bx-link-external"></i></a>
-                </div>
-            </div>
-            <div class="projectContainer">
-                <img src="../images/PhotoProfilAbout2.png" alt="PP">
-                <div class="projectInfos">
-                    <h4>Web Design</h4>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat ipsa nesciunt vel commodi voluptatem laudantium hic ipsam illo possimus expedita.</p>
-                    <a href="#"><i class="bx bx-link-external"></i></a>
-                </div>
-            </div>
-            <div class="projectContainer">
-                <img src="../images/PhotoProfilAbout2.png" alt="PP">
-                <div class="projectInfos">
-                    <h4>Web Design</h4>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat ipsa nesciunt vel commodi voluptatem laudantium hic ipsam illo possimus expedita.</p>
-                    <a href="#"><i class="bx bx-link-external"></i></a>
-                </div>
-            </div>
-            <div class="projectContainer">
-                <img src="../images/PhotoProfilAbout2.png" alt="PP">
-                <div class="projectInfos">
-                    <h4>Web Design</h4>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat ipsa nesciunt vel commodi voluptatem laudantium hic ipsam illo possimus expedita.</p>
-                    <a href="#"><i class="bx bx-link-external"></i></a>
-                </div>
-            </div>
-            <div class="projectContainer">
-                <img src="../images/PhotoProfilAbout2.png" alt="PP">
-                <div class="projectInfos">
-                    <h4>Web Design</h4>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat ipsa nesciunt vel commodi voluptatem laudantium hic ipsam illo possimus expedita.</p>
-                    <a href="#"><i class="bx bx-link-external"></i></a>
-                </div>
-            </div>
-            <div class="projectContainer">
-                <img src="../images/PhotoProfilAbout2.png" alt="PP">
-                <div class="projectInfos">
-                    <h4>Web Design</h4>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat ipsa nesciunt vel commodi voluptatem laudantium hic ipsam illo possimus expedita.</p>
-                    <a href="#"><i class="bx bx-link-external"></i></a>
-                </div>
-            </div>
-        </div>
-    </section> -->
-
-    <!-- Projects section -->
      <section class="projects" id="projects">
-        <h2 class="heading">My Projects</h2>
+        <h2 data-i18n="projects_Title" class="heading">My <span>Projects</span></h2>
         <div class="projects-box">
             <div class="project-card">
-                <img src="../images/PhotoProfilAbout2.png" alt="Project 1">
-                <h3>Project 1</h3>
+                <img src="../images/projects/codify/coverImage.png" alt="Project Codify">
+                <h3>Codify</h3>
+                <p data-i18n="codify_Explanation">Tutorial website showcasing programming skills learnt in the CAWEB master.</p>
+                <div class="projectBtn">
+                    <a data-i18n="codify_Review" href="../pages/projects/codifyProject.html">Review Project</a>
+                </div>
+            </div>
+
+            <!-- <div class="project-card">
+                <img src="../images/ProfilPhoto.JPG" alt="Project 1">
+                <h3>Wordpress website</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit distinctio pariatur illum porro beatae ipsa magnam quasi assumenda commodi dicta quia itaque, blanditiis doloribus cumque?</p>
+                <div class="projectBtn">Review Project</div>
+            </div> -->
+
+            <!-- <div class="project-card">
+                <img src="../images/ProfilPhoto.JPG" alt="Project 1">
+                <h3>End of semester project</h3>
                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit distinctio pariatur illum porro beatae ipsa magnam quasi assumenda commodi dicta quia itaque, blanditiis doloribus cumque?</p>
                 <div class="projectBtn">Review Project</div>
             </div>
 
             <div class="project-card">
-                <img src="../images/PhotoProfilAbout2.png" alt="Project 1">
-                <h3>Project 2</h3>
+                <img src="../images/ProfilPhoto.JPG" alt="Project 1">
+                <h3>CAWEB master's website</h3>
                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit distinctio pariatur illum porro beatae ipsa magnam quasi assumenda commodi dicta quia itaque, blanditiis doloribus cumque?</p>
                 <div class="projectBtn">Review Project</div>
-            </div>
-
-            <div class="project-card">
-                <img src="../images/PhotoProfilAbout2.png" alt="Project 1">
-                <h3>Project 3</h3>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit distinctio pariatur illum porro beatae ipsa magnam quasi assumenda commodi dicta quia itaque, blanditiis doloribus cumque?</p>
-                <div class="projectBtn">Review Project</div>
-            </div>
-
-            <div class="project-card">
-                <img src="../images/PhotoProfilAbout2.png" alt="Project 1">
-                <h3>Project 4</h3>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit distinctio pariatur illum porro beatae ipsa magnam quasi assumenda commodi dicta quia itaque, blanditiis doloribus cumque?</p>
-                <div class="projectBtn">Review Project</div>
-            </div>
-
-            <div class="project-card">
-                <img src="../images/PhotoProfilAbout2.png" alt="Project 1">
-                <h3>Project 5</h3>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit distinctio pariatur illum porro beatae ipsa magnam quasi assumenda commodi dicta quia itaque, blanditiis doloribus cumque?</p>
-                <div class="projectBtn">Review Project</div>
-            </div>
-
-            <div class="project-card">
-                <img src="../images/PhotoProfilAbout2.png" alt="Project 1">
-                <h3>Project 6</h3>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit distinctio pariatur illum porro beatae ipsa magnam quasi assumenda commodi dicta quia itaque, blanditiis doloribus cumque?</p>
-                <div class="projectBtn">Review Project</div>
-            </div>
+            </div> -->
         </div>
-     </section>
+    </section>
 
-    <script src="../js/header.js"></script>
+    <!-- Footer section -->
+    <footer class="footer" id="footer">
+        <div class="footerText">
+            <p data-i18n="copyright">Copyright &copy; Portfolio website made by Cesar MILESI - 2024 | All Rights Reserved</p>
+        </div>
+    </footer>
+
     <script src="../js/darkMode.js"></script>
     <script src="../js/languageSelector.js"></script>
     <script src="../js/languageSwitcher.js"></script>
     <script src="../js/hamburgerMenu.js"></script>
+    <script src="../js/backToTop_header.js"></script>
+    <script src="../js/cookies.js"></script>
 </body>
 </html>
