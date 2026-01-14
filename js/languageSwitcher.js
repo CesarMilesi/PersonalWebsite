@@ -37,7 +37,7 @@ async function fetchJsonContent(pageName) {
         const results = await Promise.all(jsonFiles.map(async jsonFile => {
             let file = '';
             switch (jsonFile != null) {
-                case (jsonFile.match("Project") != null):
+                case (jsonFile.match("Project") != null || jsonFile.match("Personal") != null):
                     file = 'projects/' + jsonFile;
                     break;
                 case (jsonFile.match('') === null || jsonFile.length === 0):
